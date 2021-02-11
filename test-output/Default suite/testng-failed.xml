@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.IndentifyNewBike.Test.UsedCarsTest">
+      <class name="com.IndentifyNewBike.Test.ZigWheelsTest">
         <methods>
-          <include name="extractcarDetails"/>
-          <include name="getUserDetails"/>
-          <include name="validUserCaars"/>
+          <include name="validNewBikes"/>
+          <include name="setup"/>
+          <include name="getBikeDetails"/>
+          <include name="validUpcommingBikes"/>
         </methods>
-      </class> <!-- com.IndentifyNewBike.Test.UsedCarsTest -->
+      </class> <!-- com.IndentifyNewBike.Test.ZigWheelsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

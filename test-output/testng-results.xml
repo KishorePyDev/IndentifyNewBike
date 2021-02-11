@@ -5,16 +5,16 @@
       <![CDATA[Couldn't find your Google Account]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13996" started-at="2021-02-11T08:29:29 IST" finished-at="2021-02-11T08:29:43 IST">
+  <suite name="Default suite" duration-ms="29244" started-at="2021-02-11T14:30:22 IST" finished-at="2021-02-11T14:30:51 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13996" started-at="2021-02-11T08:29:29 IST" finished-at="2021-02-11T08:29:43 IST">
+    <test name="Default test" duration-ms="29244" started-at="2021-02-11T14:30:22 IST" finished-at="2021-02-11T14:30:51 IST">
       <class name="com.IndentifyNewBike.Test.loginTest">
-        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@1f7030a6]" name="getUserDetails" is-config="true" duration-ms="4735" started-at="2021-02-11T08:29:29 IST" finished-at="2021-02-11T08:29:34 IST">
+        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@1f7030a6]" name="getUserDetails" is-config="true" duration-ms="17286" started-at="2021-02-11T14:30:22 IST" finished-at="2021-02-11T14:30:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserDetails -->
-        <test-method status="PASS" signature="googleLogin()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@1f7030a6]" name="googleLogin" duration-ms="9166" started-at="2021-02-11T08:29:34 IST" finished-at="2021-02-11T08:29:43 IST">
+        <test-method status="PASS" signature="googleLogin()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@1f7030a6]" name="googleLogin" duration-ms="11468" started-at="2021-02-11T14:30:39 IST" finished-at="2021-02-11T14:30:51 IST">
           <reporter-output>
             <line>
               <![CDATA[Couldn't find your Google Account]]>

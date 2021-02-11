@@ -210,12 +210,14 @@ public class Base {
 	
 	public void logZig() throws InterruptedException
 	{
+		// Window Handling Concept
 		driver.findElement(By.id("forum_login_title_lg")).click();
 
 
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id='googleSignIn']")).click();
 		
+		// line 221 to 236
 		 String MainWindow=driver.getWindowHandle();
 		 
  		
@@ -230,18 +232,18 @@ public class Base {
 	            if(!MainWindow.equalsIgnoreCase(ChildWindow))			
 	            {    		
 	                 
-	                    // Switching to Child window
-	                    driver.switchTo().window(ChildWindow);	 
-	                    Thread.sleep(2000);
-	                    driver.findElement(By.id("identifierId"))
-	                    .sendKeys("dummy@gmal.com");     
-	                    driver.findElement(By.xpath("//*[@id='identifierNext']/div/button/div[2]")).click();
-	                    
-	                    String msg = driver.findElement(By.xpath("//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div")).getText();
-	                    
-	                   Reporter.log(msg);	
-	                    
-	                    driver.close();
+                // Switching to Child window
+                driver.switchTo().window(ChildWindow);	 
+                Thread.sleep(2000);
+                driver.findElement(By.id("identifierId"))
+                .sendKeys("dummy@gmal.com");     
+                driver.findElement(By.xpath("//*[@id='identifierNext']/div/button/div[2]")).click();
+                
+                String msg = driver.findElement(By.xpath("//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div")).getText();
+                
+               Reporter.log(msg);	
+                
+                driver.close();
 	                                 
 				
 	                     		
