@@ -75,21 +75,21 @@ public class Base {
 	}
 
 	public void elementClick(String xpathKey) {
-		driver.findElement(By.xpath(prop.getProperty(xpathKey))).click();
+		driver.findElement(By.xpath(xpathKey)).click();
 	}
 	
 	
 	public void elementHover(String linktextVal)
 	{
 		Actions action = new Actions(driver);;
-		WebElement element = driver.findElement(By.linkText(prop.getProperty(linktextVal)));
+		WebElement element = driver.findElement(By.linkText(linktextVal));
 		action.moveToElement(element).build().perform();
 	}
 	
 	public void scrollUntil(String scrollKey)
 	{
 		JavascriptExecutor je = (JavascriptExecutor) driver;
-		WebElement element = driver.findElement(By.xpath(prop.getProperty(scrollKey)));
+		WebElement element = driver.findElement(By.xpath(scrollKey));
 		je.executeScript("arguments[0].scrollIntoView(true)", element);
 	}
 	
@@ -142,82 +142,29 @@ public class Base {
 
 	}
 	
-	public void BikeUpcomingDetails() throws InterruptedException
-	{
-		List<WebElement> price = driver.findElements(By.xpath("//div[@class='clr-bl p-5']"));
-		List<WebElement> bname = driver.findElements(By.xpath("//strong[@class='lnk-hvr block of-hid h-height']"));
-		List<WebElement> ldate = driver.findElements(By.xpath("//div[@class='clr-try fnt-15']"));
-		
-		
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//*[@id='carModels']/ul/li[21]/span")).click();
 	
-		Thread.sleep(5000);
-		
+	public List<WebElement> ListKey(String listKey) throws InterruptedException {
 
-		List<WebElement> priceElement =  price;
-		List<WebElement> nameElement =  bname;
-		List<WebElement> launchdate =  ldate;
+		List<WebElement> price = driver.findElements(By.xpath(listKey));
 
-		
-		Map<Double, String> objMap = new HashMap<Double, String>();
+		return price;
 
-		List<String> bikeDetails = new ArrayList<String>();
-	
-
-		for (int i = 0; i < price.size(); i++) 
-		{
-			
-			String priceList = priceElement.get(i).getText();
-			String nameList = nameElement.get(i).getText();
-			String lauchDatelist = launchdate.get(i).getText();
-	
-			Double val = Double.parseDouble(priceList.substring(4,9));
-
-			objMap.put(val, nameList+" "+lauchDatelist);
-		
-
-		}
-
-        TreeMap<Double, String> sorted = new TreeMap<Double, String>(); 
-
-        sorted.putAll(objMap); 
-        
-        String lineSeparator= System.getProperty("line.separator");
-
-        for (Map.Entry<Double, String> entry : sorted.entrySet())  
-        {
-
-            if(entry.getKey() <= 4.00)
-            {
-            	 Reporter.log("Rs. "+ entry.getKey()+" lakh" + lineSeparator +
-                         entry.getValue());
-            	 Reporter.log("");
-            	 
-            	
-            }
-        }
 	}
+
 	
-	public void extarctOf() throws InterruptedException
+	public String extarctOfPopularModels(String popularModelKey) throws InterruptedException
 	{
 
-		String extractList = driver.findElement(By.xpath("//div[@class='gsc_thin_scroll']")).getText();
+		String extractList = driver.findElement(By.xpath(popularModelKey)).getText();
 		Reporter.log(extractList);
-		
+		return extractList;
 	}
 	
 	
-	public void logZig() throws InterruptedException
+	public String  logZig(String submitBtn) throws InterruptedException
 	{
-		// Window Handling Concept
-		driver.findElement(By.id("forum_login_title_lg")).click();
+		String msg = null;
 
-
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id='googleSignIn']")).click();
-		
-		// line 221 to 236
 		 String MainWindow=driver.getWindowHandle();
 		 
  		
@@ -236,24 +183,23 @@ public class Base {
                 driver.switchTo().window(ChildWindow);	 
                 Thread.sleep(2000);
                 driver.findElement(By.id("identifierId"))
-                .sendKeys("dummy@gmal.com");     
-                driver.findElement(By.xpath("//*[@id='identifierNext']/div/button/div[2]")).click();
+                .sendKeys(prop.getProperty("emailID"));     
+                driver.findElement(By.xpath(submitBtn)).click();
                 
-                String msg = driver.findElement(By.xpath("//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div")).getText();
+                msg = driver.findElement(By.xpath("//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div")).getText();
                 
                Reporter.log(msg);	
-                
-                driver.close();
-	                                 
-				
+              
+	
 	                     		
 	            }		
-	        }		
+	        }
+			return msg;		
 	}
 
 
 	public void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 
 }

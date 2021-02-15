@@ -1,27 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="6" total="20" passed="14">
   <reporter-output>
+    <line>
+      <![CDATA[Rs. 1.2 lakh
+Honda PCX160 Exp. Launch : June 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 1.4 lakh
+Honda Hornet 2.0 Adventure Exp. Launch : September 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 1.45 lakh
+Honda PCX Electric Exp. Launch : July 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 1.6 lakh
+Honda CBR150R Exp. Launch : October 2022]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 2.1 lakh
+Honda CB350X Scrambler Exp. Launch : 16 Feb 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 2.3 lakh
+Honda Rebel 300 Exp. Launch : August 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 2.41 lakh
+Honda CB300R Exp. Launch : May 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Rs. 3.0 lakh
+Honda CBR300R Exp. Launch : August 2021]]>
+    </line>
+    <line>
+      <![CDATA[]]>
+    </line>
+    <line>
+      <![CDATA[Hyundai I10
+Hyundai Santro Xing
+Mahindra XUV500
+Toyota Fortuner
+Toyota Innova
+Honda City
+Maruti 800
+Maruti Alto
+Maruti Swift
+Maruti Swift Dzire]]>
+    </line>
     <line>
       <![CDATA[Couldn't find your Google Account]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29244" started-at="2021-02-11T14:30:22 IST" finished-at="2021-02-11T14:30:51 IST">
+  <suite name="Test Suite" duration-ms="123038" started-at="2021-02-15T12:54:02 IST" finished-at="2021-02-15T12:56:05 IST">
     <groups>
+      <group name="Smoke Suite">
+        <method signature="UsedCarsTest.validUserCaars()[pri:1, instance:com.IndentifyNewBike.Test.UsedCarsTest@74650e52]" name="validUserCaars" class="com.IndentifyNewBike.Test.UsedCarsTest"/>
+        <method signature="ZigWheelsTest.validNewBikes()[pri:1, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="validNewBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="ZigWheelsTest.validUpcommingBikes()[pri:2, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="validUpcommingBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="loginTest.validLoginButton()[pri:1, instance:com.IndentifyNewBike.Test.loginTest@15d0c81b]" name="validLoginButton" class="com.IndentifyNewBike.Test.loginTest"/>
+        <method signature="UsedCarsTest.validUserCaars()[pri:1, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="validUserCaars" class="com.IndentifyNewBike.Test.UsedCarsTest"/>
+        <method signature="ZigWheelsTest.validNewBikes()[pri:1, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validNewBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="ZigWheelsTest.validUpcommingBikes()[pri:2, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validUpcommingBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="loginTest.validLoginButton()[pri:1, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="validLoginButton" class="com.IndentifyNewBike.Test.loginTest"/>
+      </group> <!-- Smoke Suite -->
+      <group name="Regression Suite">
+        <method signature="UsedCarsTest.validUserCaars()[pri:1, instance:com.IndentifyNewBike.Test.UsedCarsTest@74650e52]" name="validUserCaars" class="com.IndentifyNewBike.Test.UsedCarsTest"/>
+        <method signature="ZigWheelsTest.validNewBikes()[pri:1, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="validNewBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="ZigWheelsTest.validUpcommingBikes()[pri:2, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="validUpcommingBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="loginTest.validLoginButton()[pri:1, instance:com.IndentifyNewBike.Test.loginTest@15d0c81b]" name="validLoginButton" class="com.IndentifyNewBike.Test.loginTest"/>
+        <method signature="UsedCarsTest.extractcarDetails()[pri:3, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="extractcarDetails" class="com.IndentifyNewBike.Test.UsedCarsTest"/>
+        <method signature="UsedCarsTest.validChennai()[pri:2, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="validChennai" class="com.IndentifyNewBike.Test.UsedCarsTest"/>
+        <method signature="UsedCarsTest.validUserCaars()[pri:1, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="validUserCaars" class="com.IndentifyNewBike.Test.UsedCarsTest"/>
+        <method signature="ZigWheelsTest.getBikeDetails()[pri:4, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="getBikeDetails" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="ZigWheelsTest.validNewBikes()[pri:1, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validNewBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="ZigWheelsTest.validUpcommingBikes()[pri:2, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validUpcommingBikes" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="ZigWheelsTest.validateHonda()[pri:3, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validateHonda" class="com.IndentifyNewBike.Test.ZigWheelsTest"/>
+        <method signature="loginTest.captureMessage()[pri:3, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="captureMessage" class="com.IndentifyNewBike.Test.loginTest"/>
+        <method signature="loginTest.validGoogleLoginButton()[pri:2, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="validGoogleLoginButton" class="com.IndentifyNewBike.Test.loginTest"/>
+        <method signature="loginTest.validLoginButton()[pri:1, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="validLoginButton" class="com.IndentifyNewBike.Test.loginTest"/>
+      </group> <!-- Regression Suite -->
     </groups>
-    <test name="Default test" duration-ms="29244" started-at="2021-02-11T14:30:22 IST" finished-at="2021-02-11T14:30:51 IST">
+    <test name="Smoke Suite" duration-ms="34310" started-at="2021-02-15T12:54:02 IST" finished-at="2021-02-15T12:54:36 IST">
+      <class name="com.IndentifyNewBike.Test.ZigWheelsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="setup" is-config="true" duration-ms="9396" started-at="2021-02-15T12:54:02 IST" finished-at="2021-02-15T12:54:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validNewBikes()[pri:1, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="validNewBikes" duration-ms="267" started-at="2021-02-15T12:54:25 IST" finished-at="2021-02-15T12:54:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validNewBikes -->
+        <test-method status="PASS" signature="validUpcommingBikes()[pri:2, instance:com.IndentifyNewBike.Test.ZigWheelsTest@1786dec2]" name="validUpcommingBikes" duration-ms="2232" started-at="2021-02-15T12:54:25 IST" finished-at="2021-02-15T12:54:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUpcommingBikes -->
+      </class> <!-- com.IndentifyNewBike.Test.ZigWheelsTest -->
       <class name="com.IndentifyNewBike.Test.loginTest">
-        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@1f7030a6]" name="getUserDetails" is-config="true" duration-ms="17286" started-at="2021-02-11T14:30:22 IST" finished-at="2021-02-11T14:30:39 IST">
+        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@15d0c81b]" name="getUserDetails" is-config="true" duration-ms="8581" started-at="2021-02-15T12:54:16 IST" finished-at="2021-02-15T12:54:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserDetails -->
-        <test-method status="PASS" signature="googleLogin()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@1f7030a6]" name="googleLogin" duration-ms="11468" started-at="2021-02-11T14:30:39 IST" finished-at="2021-02-11T14:30:51 IST">
+        <test-method status="PASS" signature="validLoginButton()[pri:1, instance:com.IndentifyNewBike.Test.loginTest@15d0c81b]" name="validLoginButton" duration-ms="422" started-at="2021-02-15T12:54:36 IST" finished-at="2021-02-15T12:54:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginButton -->
+      </class> <!-- com.IndentifyNewBike.Test.loginTest -->
+      <class name="com.IndentifyNewBike.Test.UsedCarsTest">
+        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.UsedCarsTest@74650e52]" name="getUserDetails" is-config="true" duration-ms="4926" started-at="2021-02-15T12:54:11 IST" finished-at="2021-02-15T12:54:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserDetails -->
+        <test-method status="PASS" signature="validUserCaars()[pri:1, instance:com.IndentifyNewBike.Test.UsedCarsTest@74650e52]" name="validUserCaars" duration-ms="8335" started-at="2021-02-15T12:54:27 IST" finished-at="2021-02-15T12:54:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserCaars -->
+      </class> <!-- com.IndentifyNewBike.Test.UsedCarsTest -->
+    </test> <!-- Smoke Suite -->
+    <test name="Regression Suite" duration-ms="88643" started-at="2021-02-15T12:54:36 IST" finished-at="2021-02-15T12:56:05 IST">
+      <class name="com.IndentifyNewBike.Test.ZigWheelsTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="setup" is-config="true" duration-ms="4653" started-at="2021-02-15T12:54:36 IST" finished-at="2021-02-15T12:54:41 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="validNewBikes()[pri:1, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validNewBikes" duration-ms="300" started-at="2021-02-15T12:55:01 IST" finished-at="2021-02-15T12:55:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validNewBikes -->
+        <test-method status="PASS" signature="validUpcommingBikes()[pri:2, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validUpcommingBikes" duration-ms="4551" started-at="2021-02-15T12:55:01 IST" finished-at="2021-02-15T12:55:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUpcommingBikes -->
+        <test-method status="PASS" signature="validateHonda()[pri:3, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="validateHonda" duration-ms="6689" started-at="2021-02-15T12:55:06 IST" finished-at="2021-02-15T12:55:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateHonda -->
+        <test-method status="PASS" signature="getBikeDetails()[pri:4, instance:com.IndentifyNewBike.Test.ZigWheelsTest@4b553d26]" name="getBikeDetails" duration-ms="18958" started-at="2021-02-15T12:55:13 IST" finished-at="2021-02-15T12:55:32 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Rs. 1.2 lakh
+Honda PCX160 Exp. Launch : June 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 1.4 lakh
+Honda Hornet 2.0 Adventure Exp. Launch : September 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 1.45 lakh
+Honda PCX Electric Exp. Launch : July 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 1.6 lakh
+Honda CBR150R Exp. Launch : October 2022]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 2.1 lakh
+Honda CB350X Scrambler Exp. Launch : 16 Feb 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 2.3 lakh
+Honda Rebel 300 Exp. Launch : August 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 2.41 lakh
+Honda CB300R Exp. Launch : May 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+            <line>
+              <![CDATA[Rs. 3.0 lakh
+Honda CBR300R Exp. Launch : August 2021]]>
+            </line>
+            <line>
+              <![CDATA[]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getBikeDetails -->
+      </class> <!-- com.IndentifyNewBike.Test.ZigWheelsTest -->
+      <class name="com.IndentifyNewBike.Test.loginTest">
+        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="getUserDetails" is-config="true" duration-ms="7135" started-at="2021-02-15T12:54:54 IST" finished-at="2021-02-15T12:55:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserDetails -->
+        <test-method status="PASS" signature="validLoginButton()[pri:1, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="validLoginButton" duration-ms="1893" started-at="2021-02-15T12:55:48 IST" finished-at="2021-02-15T12:55:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginButton -->
+        <test-method status="PASS" signature="validGoogleLoginButton()[pri:2, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="validGoogleLoginButton" duration-ms="5823" started-at="2021-02-15T12:55:50 IST" finished-at="2021-02-15T12:55:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validGoogleLoginButton -->
+        <test-method status="PASS" signature="captureMessage()[pri:3, instance:com.IndentifyNewBike.Test.loginTest@86be70a]" name="captureMessage" duration-ms="9463" started-at="2021-02-15T12:55:55 IST" finished-at="2021-02-15T12:56:05 IST">
           <reporter-output>
             <line>
               <![CDATA[Couldn't find your Google Account]]>
             </line>
           </reporter-output>
-        </test-method> <!-- googleLogin -->
+        </test-method> <!-- captureMessage -->
       </class> <!-- com.IndentifyNewBike.Test.loginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.IndentifyNewBike.Test.UsedCarsTest">
+        <test-method status="PASS" signature="getUserDetails()[pri:0, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="getUserDetails" is-config="true" duration-ms="12844" started-at="2021-02-15T12:54:41 IST" finished-at="2021-02-15T12:54:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserDetails -->
+        <test-method status="PASS" signature="validUserCaars()[pri:1, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="validUserCaars" duration-ms="11516" started-at="2021-02-15T12:55:32 IST" finished-at="2021-02-15T12:55:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserCaars -->
+        <test-method status="PASS" signature="validChennai()[pri:2, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="validChennai" duration-ms="3255" started-at="2021-02-15T12:55:43 IST" finished-at="2021-02-15T12:55:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validChennai -->
+        <test-method status="PASS" signature="extractcarDetails()[pri:3, instance:com.IndentifyNewBike.Test.UsedCarsTest@69a3d1d]" name="extractcarDetails" duration-ms="1354" started-at="2021-02-15T12:55:46 IST" finished-at="2021-02-15T12:55:48 IST">
+          <reporter-output>
+            <line>
+              <![CDATA[Hyundai I10
+Hyundai Santro Xing
+Mahindra XUV500
+Toyota Fortuner
+Toyota Innova
+Honda City
+Maruti 800
+Maruti Alto
+Maruti Swift
+Maruti Swift Dzire]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extractcarDetails -->
+      </class> <!-- com.IndentifyNewBike.Test.UsedCarsTest -->
+    </test> <!-- Regression Suite -->
+  </suite> <!-- Test Suite -->
 </testng-results>

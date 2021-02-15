@@ -6,8 +6,9 @@
       <class name="com.IndentifyNewBike.Test.ZigWheelsTest">
         <methods>
           <include name="validNewBikes"/>
-          <include name="setup"/>
+          <include name="closeBrowser"/>
           <include name="getBikeDetails"/>
+          <include name="validateHonda"/>
           <include name="validUpcommingBikes"/>
         </methods>
       </class> <!-- com.IndentifyNewBike.Test.ZigWheelsTest -->
