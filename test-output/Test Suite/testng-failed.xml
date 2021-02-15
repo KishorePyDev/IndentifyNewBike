@@ -8,11 +8,12 @@
       </run>
     </groups>
     <classes>
-      <class name="com.IndentifyNewBike.Test.ZigWheelsTest">
+      <class name="com.IndentifyNewBike.Test.loginTest">
         <methods>
-          <include name="getBikeDetails"/>
+          <include name="validGoogleLoginButton"/>
+          <include name="captureMessage"/>
         </methods>
-      </class> <!-- com.IndentifyNewBike.Test.ZigWheelsTest -->
+      </class> <!-- com.IndentifyNewBike.Test.loginTest -->
     </classes>
   </test> <!-- Regression Suite(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

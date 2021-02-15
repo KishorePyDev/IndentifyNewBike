@@ -8,6 +8,7 @@ import java.util.TreeMap;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
@@ -98,14 +99,17 @@ public class ZigWheelsTest extends Base {
 
 			if (entry.getKey() <= 4.00) {
 				Reporter.log("Rs. " + entry.getKey() + " lakh" + lineSeparator + entry.getValue());
-				Reporter.log("");
+				System.out.println("Rs. " + entry.getKey() + " lakh" + "" + entry.getValue());
+				
+				
 
 			}
 		}
+		System.out.println("--------------------------");
 
 	}
 	
-	@AfterTest
+	@AfterGroups({"Smoke Suite","Regression Suite"})
 	public void closeBrowser()
 	{
 		tearDown();

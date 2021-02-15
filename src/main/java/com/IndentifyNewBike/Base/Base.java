@@ -77,23 +77,19 @@ public class Base {
 	public void elementClick(String xpathKey) {
 		driver.findElement(By.xpath(xpathKey)).click();
 	}
-	
-	
-	public void elementHover(String linktextVal)
-	{
-		Actions action = new Actions(driver);;
+
+	public void elementHover(String linktextVal) {
+		Actions action = new Actions(driver);
+		;
 		WebElement element = driver.findElement(By.linkText(linktextVal));
 		action.moveToElement(element).build().perform();
 	}
-	
-	public void scrollUntil(String scrollKey)
-	{
+
+	public void scrollUntil(String scrollKey) {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath(scrollKey));
 		je.executeScript("arguments[0].scrollIntoView(true)", element);
 	}
-	
-	
 
 	public void uploadImage(String nameKey, String dataKey) {
 		driver.findElement(By.name(prop.getProperty(nameKey))).sendKeys(prop.getProperty(dataKey));
@@ -132,17 +128,15 @@ public class Base {
 		return driver.findElements(By.tagName(tagName));
 
 	}
-	
-	public List<WebElement> listDetaails(String xpathKey) throws InterruptedException 
-	{
+
+	public List<WebElement> listDetaails(String xpathKey) throws InterruptedException {
 
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName(xpathKey)));
 		return driver.findElements(By.xpath(xpathKey));
 
 	}
-	
-	
+
 	public List<WebElement> ListKey(String listKey) throws InterruptedException {
 
 		List<WebElement> price = driver.findElements(By.xpath(listKey));
@@ -151,52 +145,43 @@ public class Base {
 
 	}
 
-	
-	public String extarctOfPopularModels(String popularModelKey) throws InterruptedException
-	{
+	public String extarctOfPopularModels(String popularModelKey) throws InterruptedException {
 
 		String extractList = driver.findElement(By.xpath(popularModelKey)).getText();
 		Reporter.log(extractList);
 		return extractList;
 	}
-	
-	
-	public String  logZig(String submitBtn) throws InterruptedException
-	{
+
+	public String logZig(String submitBtn) throws InterruptedException {
 		String msg = null;
 
-		 String MainWindow=driver.getWindowHandle();
-		 
- 		
-	        // To handle all new opened window.				
-	        Set<String> s1=driver.getWindowHandles();
-	        Iterator<String> i1=s1.iterator();		
-	        		
-	        while(i1.hasNext())			
-	        {		
-	            String ChildWindow=i1.next();		
-	            		
-	            if(!MainWindow.equalsIgnoreCase(ChildWindow))			
-	            {    		
-	                 
-                // Switching to Child window
-                driver.switchTo().window(ChildWindow);	 
-                Thread.sleep(2000);
-                driver.findElement(By.id("identifierId"))
-                .sendKeys(prop.getProperty("emailID"));     
-                driver.findElement(By.xpath(submitBtn)).click();
-                
-                msg = driver.findElement(By.xpath("//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div")).getText();
-                
-               Reporter.log(msg);	
-              
-	
-	                     		
-	            }		
-	        }
-			return msg;		
-	}
+		String MainWindow = driver.getWindowHandle();
 
+		// To handle all new opened window.
+		Set<String> s1 = driver.getWindowHandles();
+		Iterator<String> i1 = s1.iterator();
+
+		while (i1.hasNext()) {
+			String ChildWindow = i1.next();
+
+			if (!MainWindow.equalsIgnoreCase(ChildWindow)) {
+
+				// Switching to Child window
+				driver.switchTo().window(ChildWindow);
+				Thread.sleep(2000);
+				driver.findElement(By.id("identifierId")).sendKeys(prop.getProperty("emailID"));
+				driver.findElement(By.xpath(submitBtn)).click();
+
+				msg = driver.findElement(By.xpath(
+						"//*[@id='view_container']/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div"))
+						.getText();
+
+				Reporter.log(msg);
+
+			}
+		}
+		return msg;
+	}
 
 	public void tearDown() {
 		driver.quit();

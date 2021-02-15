@@ -1,5 +1,6 @@
 package com.IndentifyNewBike.Test;
 
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
@@ -39,9 +40,10 @@ public class loginTest extends Base
 	{
 		String txt = logZig("//*[@id='identifierNext']/div/button/div[2]");
 		System.out.println(txt);
+		System.out.println("--------------------------");
 	}
 	
-	@AfterTest
+	
 	public void closeBrowser()
 	{
 		tearDown();

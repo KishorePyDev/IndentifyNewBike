@@ -3,30 +3,22 @@
 <suite name="Test Suite">
  	<test thread-count="5" name="Smoke Suite">
 		<groups>
-
 			<run>
-
 				<include name="Smoke Suite"></include>
-
 			</run>
-
 		</groups>
 		<classes>
 			<class name="com.IndentifyNewBike.Test.ZigWheelsTest" />
 			<class name="com.IndentifyNewBike.Test.UsedCarsTest" />
 			<class name="com.IndentifyNewBike.Test.loginTest" />
-
 		</classes>
 	</test> 
 
 	<test thread-count="4" name="Regression Suite">
 		<groups>
-
 			<run>
 				<include name="Regression Suite"></include>
-
 			</run>
-
 		</groups>
 		<classes>
 			<class name="com.IndentifyNewBike.Test.ZigWheelsTest" />

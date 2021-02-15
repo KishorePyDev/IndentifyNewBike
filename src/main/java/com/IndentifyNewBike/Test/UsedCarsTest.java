@@ -1,6 +1,7 @@
 package com.IndentifyNewBike.Test;
 
 import org.testng.Reporter;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
@@ -43,10 +44,11 @@ public class UsedCarsTest extends Base
 		String txt = extarctOfPopularModels("//div[@class='gsc_thin_scroll']");
 		
 		System.out.println(txt);
+		System.out.println("--------------------------");
 		
 	}
 	
-	@AfterTest
+	@AfterGroups({"Smoke Suite","Regression Suite"})
 	public void closeBrowser()
 	{
 		tearDown();
