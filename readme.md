@@ -15,6 +15,6 @@ Display upcoming bikes details like , bike name, its price and expected launch d
  - For Used cars in Chennai, extract all the popular models in a List;
    Display the same
  - Try to 'Login' with google, give invalid account details & capture
-   the error message   (Suggested site: zigwheels.com however you are   
+   the error message   (Suggested site: zigwheels.com however you are
    free to use any legitimate site)
 
