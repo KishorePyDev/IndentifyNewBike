@@ -8,8 +8,15 @@
       </run>
     </groups>
     <classes>
+      <class name="com.IndentifyNewBike.Test.ZigWheelsTest">
+        <methods>
+          <include name="getBikeDetails"/>
+          <include name="validateHonda"/>
+        </methods>
+      </class> <!-- com.IndentifyNewBike.Test.ZigWheelsTest -->
       <class name="com.IndentifyNewBike.Test.loginTest">
         <methods>
+          <include name="validLoginButton"/>
           <include name="validGoogleLoginButton"/>
           <include name="captureMessage"/>
         </methods>

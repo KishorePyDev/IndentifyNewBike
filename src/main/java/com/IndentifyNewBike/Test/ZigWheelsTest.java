@@ -51,23 +51,23 @@ public class ZigWheelsTest extends Base {
 	{
 		scrollUntil("//*[@id=\"carModels\"]/ul/li[9]/div");
 		elementClick("//*[@id=\"carModels\"]/ul/li[9]/div/div/div/div/div/ul/li[2]/a");
+		
 
 	}
 
-	//TC5 & 7 Dispplay the Bike name,price,Launch Date  
+	//TC5 & 7 Display the Bike name,price,Launch Date  
 	@Test(groups= {"Regression Suite"},priority = 4)
 	public void getBikeDetails() throws InterruptedException 
 	{
-
-		scrollUntil("//*[@id='carModels']/ul/li[21]/span");
+		
+		scrollUntil("//*[@id='carModels']/ul/li[20]/span");
 		List<WebElement> price = ListKey("//div[@class='clr-bl p-5']");
 		List<WebElement> bname = ListKey("//strong[@class='lnk-hvr block of-hid h-height']");
 		List<WebElement> ldate = ListKey("//div[@class='clr-try fnt-15']");
 
 		Thread.sleep(5000);
-		elementClick("//*[@id='carModels']/ul/li[21]/span");
+		elementClick("//*[@id='carModels']/ul/li[20]/span");
 
-		Thread.sleep(5000);
 
 		List<WebElement> priceElement = price;
 		List<WebElement> nameElement = bname;
@@ -110,6 +110,7 @@ public class ZigWheelsTest extends Base {
 	}
 	
 	@AfterGroups({"Smoke Suite","Regression Suite"})
+	//@AfterTest()
 	public void closeBrowser()
 	{
 		tearDown();

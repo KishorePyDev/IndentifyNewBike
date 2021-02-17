@@ -35,7 +35,7 @@ public class Base {
 	public Properties prop;
 
 	/**
-	 * @Author : Kishore Kumar S Date :26/01/2021 Description: This function
+	 * @Author : Kishore Kumar S Date :8/02/2021 Description: This function
 	 *         implements the multiple broswers get the value from testing.xml file
 	 *         as paramaters
 	 */
