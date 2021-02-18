@@ -1,5 +1,12 @@
 package com.IndentifyNewBike.Test;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeGroups;
@@ -38,11 +45,26 @@ public class loginTest extends Base
 	
 	//Display error message
 	@Test(groups= {"Regression Suite"},priority = 3)
-	public void captureMessage() throws InterruptedException
+	public void captureMessage() throws InterruptedException, IOException
 	{
 		String txt = logZig("//*[@id='identifierNext']/div/button/div[2]");
 		screenShot("loginError");
 		System.out.println(txt);
+		XSSFWorkbook wb = new XSSFWorkbook();
+		XSSFSheet sheet = wb.createSheet("ErrorMessage");
+		XSSFRow row = sheet.createRow(0);
+		for(int i=0;i<1;i++)
+		{
+			XSSFCell cell = row.createCell(0);
+			cell.setCellValue(txt);
+			
+		}
+		FileOutputStream os = new FileOutputStream("CaptureMessage.xlsx");
+		wb.write(os);
+		wb.close();
+		
+		
+		
 		System.out.println("--------------------------");
 	}
 	

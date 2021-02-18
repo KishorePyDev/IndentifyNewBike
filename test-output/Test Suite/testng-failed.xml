@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]">
   <test thread-count="5" name="Regression Suite(failed)">
-    <parameter name="browserName" value="firefox"/>
+    <parameter name="browserName" value="google"/>
     <groups>
       <run>
         <include name="Regression Suite"/>
