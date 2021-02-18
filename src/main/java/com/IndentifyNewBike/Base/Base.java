@@ -15,6 +15,8 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -28,6 +30,10 @@ import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class Base {
 
@@ -109,15 +115,27 @@ public class Base {
 	 * @Author : Kishore Kumar S Date :26/01/2021 Description: This function capture
 	 *         the screenshot of webpage
 	 */
-	public void screenShot() throws InterruptedException {
+	public void screenShot(String fileName) throws InterruptedException {
 
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 		try {
 			FileHandler.copy(screenshot,
-					new File("/home/kishore/eclipse-workspace/SearchByUploadImage/ScreenShots/searchResult.png"));
+					new File("/home/kishore/eclipse-workspace/IndentifyNewBike/ScreenShots/"+ fileName+".png"));
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
+		}
+	}
+	
+	public void fullScreenShot(String fileName) {
+		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+				.takeScreenshot(driver);
+		try {
+
+			ImageIO.write(screenshot.getImage(), "PNG", new File(
+					"/home/kishore/eclipse-workspace/IndentifyNewBike/ScreenShots/"+ fileName+".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 

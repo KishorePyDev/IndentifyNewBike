@@ -1,5 +1,6 @@
 package com.IndentifyNewBike.Test;
 
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Reporter;
 import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
@@ -40,11 +41,11 @@ public class UsedCarsTest extends Base
 	public void extractcarDetails() throws InterruptedException
 	{
 		scrollUntil("/html/body/div[11]/div/div[1]/div[1]/div[1]/div[2]/ul/li[2]/div[1]/span[2]");
-	
 		String txt = extarctOfPopularModels("//div[@class='gsc_thin_scroll']");
-		
+		screenShot("PopularModels");
 		System.out.println(txt);
 		System.out.println("--------------------------");
+		
 		
 	}
 	

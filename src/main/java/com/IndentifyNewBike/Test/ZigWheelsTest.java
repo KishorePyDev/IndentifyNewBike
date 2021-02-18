@@ -1,11 +1,20 @@
 package com.IndentifyNewBike.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.AfterGroups;
@@ -17,6 +26,7 @@ import org.testng.annotations.Test;
 import com.IndentifyNewBike.Base.Base;
 
 public class ZigWheelsTest extends Base {
+
 
 	
 	//@BeforeTest()
@@ -57,8 +67,9 @@ public class ZigWheelsTest extends Base {
 
 	//TC5 & 7 Display the Bike name,price,Launch Date  
 	@Test(groups= {"Regression Suite"},priority = 4)
-	public void getBikeDetails() throws InterruptedException 
+	public void getBikeDetails() throws InterruptedException, IOException 
 	{
+	
 		
 		scrollUntil("//*[@id='carModels']/ul/li[20]/span");
 		List<WebElement> price = ListKey("//div[@class='clr-bl p-5']");
@@ -105,12 +116,13 @@ public class ZigWheelsTest extends Base {
 
 			}
 		}
+		fullScreenShot("UpcomingBikeList");
 		System.out.println("--------------------------");
-
-	}
+	          
+		}
+	
 	
 	@AfterGroups({"Smoke Suite","Regression Suite"})
-	//@AfterTest()
 	public void closeBrowser()
 	{
 		tearDown();

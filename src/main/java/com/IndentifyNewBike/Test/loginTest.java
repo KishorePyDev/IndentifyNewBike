@@ -39,6 +39,7 @@ public class loginTest extends Base
 	public void captureMessage() throws InterruptedException
 	{
 		String txt = logZig("//*[@id='identifierNext']/div/button/div[2]");
+		screenShot("loginError");
 		System.out.println(txt);
 		System.out.println("--------------------------");
 	}
