@@ -41,8 +41,10 @@ public class Base {
 	public Properties prop;
 
 	/**
-	 * @Author : Kishore Kumar S Date :8/02/2021 Description: This function
-	 *         implements the multiple broswers get the value from testing.xml file
+	 * @Author : Swetha
+	 * @Date :8/02/2021 
+	 * @Description: This function
+	 *         implements the multiple broswers get the value from Test file
 	 *         as paramaters
 	 */
 	public void invokeBrowser(String browserName) {
@@ -90,7 +92,12 @@ public class Base {
 		WebElement element = driver.findElement(By.linkText(linktextVal));
 		action.moveToElement(element).build().perform();
 	}
-
+	/**
+	 * @Author : Preethi
+	 * @Date :10/02/2021 
+	 * @Description: This function used scroll the webpage until particular element
+	 *         
+	 */
 	public void scrollUntil(String scrollKey) {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath(scrollKey));
@@ -112,8 +119,10 @@ public class Base {
 	}
 
 	/**
-	 * @Author : Kishore Kumar S Date :26/01/2021 Description: This function capture
-	 *         the screenshot of webpage
+	 * @Author : Kishore Kumar S 
+	 * @Date :16/02/2021 
+	 * @Description: This function capture the screenshot of the webpage
+	 *        
 	 */
 	public void screenShot(String fileName) throws InterruptedException {
 
@@ -126,7 +135,12 @@ public class Base {
 			System.out.println(e.getMessage());
 		}
 	}
-	
+	/**
+	 * @Author : Kishore Kumar S 
+	 * @Date :16/02/2021 
+	 * @Description: This function capture the full screenshot of webpage
+	 *        
+	 */
 	public void fullScreenShot(String fileName) {
 		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver);
@@ -169,7 +183,13 @@ public class Base {
 		Reporter.log(extractList);
 		return extractList;
 	}
-
+	
+	/**
+	 * @Author : Abila
+	 * @Date :14/02/2021 
+	 * @Description: This function used to handling the windows
+	 *        
+	 */
 	public String logZig(String submitBtn) throws InterruptedException {
 		String msg = null;
 

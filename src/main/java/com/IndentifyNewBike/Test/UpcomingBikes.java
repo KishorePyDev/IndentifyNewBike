@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 
 import com.IndentifyNewBike.Base.Base;
 
-public class ZigWheelsTest extends Base {
+public class UpcomingBikes extends Base {
 
 
 	
@@ -37,7 +37,7 @@ public class ZigWheelsTest extends Base {
 		openURL("websiteURL");
 	}
 
-	//TC1  Validate the "new bikes" tab
+	//Validate the "new bikes" tab
 	@Test(groups= {"Smoke Suite","Regression Suite"},priority = 1)
 	public void validNewBikes() throws InterruptedException 
 	{
@@ -45,7 +45,7 @@ public class ZigWheelsTest extends Base {
 
 	}
 
-	//TC2 validate the "Upcomming bikes" tab
+	//validate the "Upcomming bikes" tab
 	@Test(groups= {"Smoke Suite","Regression Suite"},priority = 2)
 	//@Test(dependsOnMethods = "validNewBikes")
 	//@Test(groups="Smoke Suite")
@@ -55,7 +55,7 @@ public class ZigWheelsTest extends Base {
 		
 	}
 	
-	//TC4 Validate the Honda Filter
+	//Validate the Honda Filter
 	@Test(groups= {"Regression Suite"},priority = 3)
 	public void validateHonda()
 	{
@@ -65,7 +65,7 @@ public class ZigWheelsTest extends Base {
 
 	}
 
-	//TC5 & 7 Display the Bike name,price,Launch Date  
+	//Display the Bike name,price,Launch Date  
 	@Test(groups= {"Regression Suite"},priority = 4)
 	public void getBikeDetails() throws InterruptedException, IOException 
 	{
@@ -111,8 +111,7 @@ public class ZigWheelsTest extends Base {
 			if (entry.getKey() <= 4.00) {
 				Reporter.log("Rs. " + entry.getKey() + " lakh" + lineSeparator + entry.getValue());
 				System.out.println("Rs. " + entry.getKey() + " lakh" + "" + entry.getValue());
-				
-				
+
 
 			}
 		}

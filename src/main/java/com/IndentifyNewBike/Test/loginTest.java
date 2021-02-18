@@ -18,7 +18,7 @@ public class loginTest extends Base
 		openURL("websiteURL");	
 	}
 	
-	//TC15 Validate the login button
+	// Validate the login button
 	@Test(groups= {"Smoke Suite","Regression Suite"},priority = 1)
 	public void validLoginButton() throws InterruptedException
 	{
@@ -26,7 +26,7 @@ public class loginTest extends Base
 		elementClick("//*[@id=\"forum_login_title_lg\"]");
 	}
 	
-	//TC17 validate continue with Google Signin button
+	//validate continue with Google Signin button
 	@Test(groups= {"Regression Suite"},priority = 2)
 	public void validGoogleLoginButton() throws InterruptedException
 	{
@@ -34,7 +34,7 @@ public class loginTest extends Base
 		elementClick("//*[@id='googleSignIn']");
 	}
 	
-	//TC19 Display error message
+	//Display error message
 	@Test(groups= {"Regression Suite"},priority = 3)
 	public void captureMessage() throws InterruptedException
 	{

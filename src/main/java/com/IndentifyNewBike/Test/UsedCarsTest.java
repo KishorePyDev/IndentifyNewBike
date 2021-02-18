@@ -20,7 +20,7 @@ public class UsedCarsTest extends Base
 		openURL("websiteURL");	
 	}
 	
-	//TC9  Validate "Used Cars" tab
+	//Validate "Used Cars" tab
 	@Test(groups= {"Smoke Suite","Regression Suite"},priority = 1)
 	public void validUserCaars() throws InterruptedException
 	{
@@ -29,14 +29,14 @@ public class UsedCarsTest extends Base
 		
 	}
 	
-	//TC10 Validate the "Chennai" from list
+	//Validate the "Chennai" from list
 	@Test(groups= {"Regression Suite"},priority = 2)
 	public void validChennai()
 	{
 		elementClick("//*[@id=\"popularCityList\"]/li[8]/a");
 	}
 	
-	//TC12 & 14 Extract Popular model list
+	//Extract Popular model list
 	@Test(groups= {"Regression Suite"},priority = 3)
 	public void extractcarDetails() throws InterruptedException
 	{
