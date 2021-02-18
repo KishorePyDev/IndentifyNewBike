@@ -49,13 +49,13 @@ public class Base {
 	 */
 	public void invokeBrowser(String browserName) {
 
-		if (browserName == "chrome") {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "/src/test/resources/drivers/chromedriver");
 			driver = new ChromeDriver();
 		}
 
-		else if (prop.getProperty(browserName).equalsIgnoreCase("firefox")) {
+		else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
 					System.getProperty("user.dir") + "/src/test/resources/drivers/geckodriver");
 			driver = new FirefoxDriver();

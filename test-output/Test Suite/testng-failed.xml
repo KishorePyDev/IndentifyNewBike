@@ -2,17 +2,20 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite]">
   <test thread-count="5" name="Regression Suite(failed)">
+    <parameter name="browserName" value="firefox"/>
     <groups>
       <run>
         <include name="Regression Suite"/>
       </run>
     </groups>
     <classes>
-      <class name="com.IndentifyNewBike.Test.UsedCarsTest">
+      <class name="com.IndentifyNewBike.Test.loginTest">
         <methods>
-          <include name="extractcarDetails"/>
+          <include name="validLoginButton"/>
+          <include name="validGoogleLoginButton"/>
+          <include name="captureMessage"/>
         </methods>
-      </class> <!-- com.IndentifyNewBike.Test.UsedCarsTest -->
+      </class> <!-- com.IndentifyNewBike.Test.loginTest -->
     </classes>
   </test> <!-- Regression Suite(failed) -->
 </suite> <!-- Failed suite [Test Suite] -->

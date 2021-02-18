@@ -6,6 +6,7 @@ import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.IndentifyNewBike.Base.Base;
@@ -13,12 +14,13 @@ import com.IndentifyNewBike.Base.Base;
 public class UsedCarsTest extends Base 
 {
 	
-	@BeforeGroups({"Smoke Suite","Regression Suite"})
-	public void getUserDetails()
-	{
-		invokeBrowser("chrome");
-		openURL("websiteURL");	
-	}
+	   @Parameters("browserName")
+		@BeforeGroups({"Smoke Suite","Regression Suite"})
+		public void setup(String browserName) throws InterruptedException 
+		{
+			invokeBrowser(browserName);
+			openURL("websiteURL");
+		}
 	
 	//Validate "Used Cars" tab
 	@Test(groups= {"Smoke Suite","Regression Suite"},priority = 1)

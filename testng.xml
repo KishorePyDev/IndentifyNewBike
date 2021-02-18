@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Test Suite">
  	<test thread-count="5" name="Smoke Suite">
+ 	<!-- Here we change the browser name chrome/firefox -->
+ 	<parameter name="browserName" value="google"></parameter>
 		<groups>
 			<run>
 				<include name="Smoke Suite"></include>
@@ -15,6 +17,8 @@
 	</test> 
 
 	<test thread-count="4" name="Regression Suite">
+	<!-- Here we change the browser name chrome/firefox -->
+	<parameter name="browserName" value="google"></parameter>
 		<groups>
 			<run>
 				<include name="Regression Suite"></include>

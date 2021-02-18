@@ -21,6 +21,7 @@ import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.IndentifyNewBike.Base.Base;
@@ -29,11 +30,11 @@ public class UpcomingBikes extends Base {
 
 
 	
-	//@BeforeTest()
+    @Parameters("browserName")
 	@BeforeGroups({"Smoke Suite","Regression Suite"})
-	public void setup() throws InterruptedException 
+	public void setup(String browserName) throws InterruptedException 
 	{
-		invokeBrowser("chrome");
+		invokeBrowser(browserName);
 		openURL("websiteURL");
 	}
 
